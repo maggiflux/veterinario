@@ -1,0 +1,32 @@
+<div class="container">
+<br>
+<br>
+<br>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @clients.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @clients.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @clients.email %>
+</p>
+
+<p>
+  <strong>Pet:</strong>
+ <% @clients.pets.each do |pet|%>
+  <%= pet.name %>
+ <% end %>
+ </p>
+ 
+
+<%= link_to 'Edit', edit_client_path(@clients) %> |
+<%= link_to 'Back', clients_path %>
+</div>

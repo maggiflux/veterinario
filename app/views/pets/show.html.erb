@@ -1,0 +1,53 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pet.name %>
+</p>
+
+<p>
+  <strong>Race:</strong>
+  <%= @pet.race %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @pet.birthday %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+ <%= @pet.client.name %>
+ </p>
+
+<br>
+<br>
+<table class="table">
+<thead>
+  <td scope="row"></td>
+    <th>weight</th>
+    <th>height</th>
+    <th>avg weight</th>
+    <th>avg height</th>
+    <th>max weight</th>
+    <th>max height</th>
+    </th>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row"></td>
+        <td><%= @pet.pet_weight%></td>
+        <td><%= @pet.pet_height%></td>
+        <td><%= @pet.avg_weight%></td>
+        <td><%= @pet.avg_height%></td>
+        <td><%= @pet.max_height%></td>
+        <td><%= @pet.max_height%></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>
+</div>
